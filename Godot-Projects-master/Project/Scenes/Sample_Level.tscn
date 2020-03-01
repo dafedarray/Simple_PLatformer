@@ -1,0 +1,62 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Sprites/SteamPunkBuilding.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/SteamCyberPunkBuild.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/BuildingWhiteBricks.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Girl pixel art.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/WIP.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/Road.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Sprites/Floor.png" type="Texture" id=8]
+[ext_resource path="res://TileMap.res" type="PackedScene" id=9]
+[ext_resource path="res://Sprites/Black_empty Wall.png" type="Texture" id=10]
+
+[node name="Sample_Level" type="Node2D"]
+
+[node name="HOLOGRAM" type="Light2D" parent="."]
+visible = false
+position = Vector2( 328.974, -52.7149 )
+texture = ExtResource( 5 )
+
+[node name="SteamPunkBuilding" type="Sprite" parent="."]
+position = Vector2( 782.43, -34.2563 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 669.889, -34.2093 )
+texture = ExtResource( 3 )
+
+[node name="BuildingWhiteBricks" type="Sprite" parent="."]
+position = Vector2( 333.858, 94.2072 )
+texture = ExtResource( 4 )
+
+[node name="Girl pixel art" type="Sprite" parent="."]
+position = Vector2( 328.684, -52.6101 )
+texture = ExtResource( 5 )
+
+[node name="WIP" type="Sprite" parent="."]
+position = Vector2( 1243.63, -34.4071 )
+texture = ExtResource( 6 )
+
+[node name="Roads" type="Node2D" parent="."]
+
+[node name="Road" parent="Roads" instance=ExtResource( 7 )]
+position = Vector2( 491.884, 349.793 )
+
+[node name="Floor" type="Sprite" parent="."]
+position = Vector2( 707.701, 159.65 )
+texture = ExtResource( 8 )
+
+[node name="Black_empty Wall" type="Sprite" parent="."]
+position = Vector2( 1609.51, 82.3078 )
+texture = ExtResource( 10 )
+
+[node name="Black_empty Wall2" type="Sprite" parent="."]
+position = Vector2( 1853.25, 80.7603 )
+texture = ExtResource( 10 )
+
+[node name="TileMap" parent="." instance=ExtResource( 9 )]
+tile_data = PoolIntArray( 65565, 0, 0, 65566, 0, 0, 131098, 0, 0, 131099, 0, 0, 131100, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 327705, 0, 0, 327706, 0, 0, 327707, 0, 0, 327708, 0, 0, 327709, 0, 0, 327710, 0, 0, 327711, 0, 0, 327712, 0, 0, 327713, 0, 0, 327714, 0, 0, 327715, 0, 0, 327716, 0, 0, 327717, 0, 0, 327718, 0, 0, 327719, 1, 0, 327720, 2, 0, 327721, 1, 0, 327722, 2, 0, 327723, 1, 0, 327724, 2, 0, 327725, 1, 0, 327726, 2, 0, 327727, 3, 0, 327728, 4, 0, 327729, 3, 0, 327730, 4, 0, 327731, 3, 0, 327732, 4, 0, 327733, 3, 0, 327734, 4, 0, 327735, 3, 0, 327736, 4, 0, 327737, 3, 0, 720920, 0, 0, 720921, 0, 0, 720922, 0, 0, 720923, 0, 0, 720924, 0, 0, 720925, 0, 0, 720926, 0, 0, 720927, 0, 0, 720928, 0, 0, 720929, 0, 0, 720930, 0, 0, 720931, 0, 0, 720932, 0, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1066.93, 36.775 )
